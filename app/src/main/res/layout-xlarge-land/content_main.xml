@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.phyconvert.root.physicsconverter.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/entryA"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="41dp"
+        android:hint="Acceleration (M/S^2)" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/entryD"
+        android:layout_below="@+id/entryA"
+        android:layout_alignLeft="@+id/entryA"
+        android:layout_alignStart="@+id/entryA"
+        android:hint="Displacement (M)" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/entryT"
+        android:layout_below="@+id/entryD"
+        android:layout_alignLeft="@+id/entryD"
+        android:layout_alignStart="@+id/entryD"
+        android:hint="Time (S)" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/entryVI"
+        android:layout_below="@+id/entryT"
+        android:layout_alignLeft="@+id/entryT"
+        android:layout_alignStart="@+id/entryT"
+        android:hint="Initial Velocity (M/S)" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/entryVF"
+        android:layout_below="@+id/entryVI"
+        android:layout_alignLeft="@+id/entryVI"
+        android:layout_alignStart="@+id/entryVI"
+        android:hint="Final Velocity (M/S)" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear All"
+        android:id="@+id/clearAllButton"
+        android:layout_alignLeft="@+id/entryVF"
+        android:layout_alignStart="@+id/entryVF"
+        android:layout_alignRight="@+id/entryVF"
+        android:layout_alignEnd="@+id/entryVF" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/accelerationClearButton"
+        android:layout_alignTop="@+id/entryA"
+        android:layout_toRightOf="@+id/entryA"
+        android:layout_toEndOf="@+id/entryA" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/displacementClearButton"
+        android:layout_below="@+id/accelerationClearButton"
+        android:layout_alignLeft="@+id/accelerationClearButton"
+        android:layout_alignStart="@+id/accelerationClearButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/velocityInitialClearButton"
+        android:layout_below="@+id/timeButton"
+        android:layout_alignLeft="@+id/timeButton"
+        android:layout_alignStart="@+id/timeButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/timeButton"
+        android:layout_below="@+id/displacementClearButton"
+        android:layout_alignLeft="@+id/displacementClearButton"
+        android:layout_alignStart="@+id/displacementClearButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/velocityFinalClearButton"
+        android:layout_below="@+id/velocityInitialClearButton"
+        android:layout_alignLeft="@+id/velocityInitialClearButton"
+        android:layout_alignStart="@+id/velocityInitialClearButton" />
+</RelativeLayout>
